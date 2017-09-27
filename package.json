@@ -1,0 +1,22 @@
+{
+  "name": "modern-deep-equal",
+  "version": "0.0.1",
+  "description": "Deep equality testing for JavaScript including support for modern data structures.",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test/*.js | tap-dot"
+  },
+  "keywords": [
+    "equality",
+    "deep-equal",
+    "equal",
+    "equality"
+  ],
+  "author": "Charlie Saunders",
+  "license": "MIT",
+  "devDependencies": {
+    "standard": "^10.0.3",
+    "tap-dot": "^1.0.5",
+    "tape": "^4.8.0"
+  }
+}
