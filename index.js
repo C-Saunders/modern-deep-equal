@@ -8,7 +8,7 @@ module.exports = (value1, value2, loose = false) => {
 
 const deepEqual = (value1, value2, eq) => {
   // primitives
-  if (eq(value1, value2)) return true
+  if (eq(value1, value2) || (Number.isNaN(value1) && Number.isNaN(value2))) return true
 
   if (typeof value1 !== typeof value2) return false
 

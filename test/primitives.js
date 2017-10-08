@@ -52,3 +52,9 @@ test('booleans', assert => {
 
   assert.end()
 })
+
+test('NaNs', assert => {
+  assert.true(equal(NaN, 0 / 0))
+  assert.true(looseEqual(NaN, 0 / 0))
+  assert.end()
+})

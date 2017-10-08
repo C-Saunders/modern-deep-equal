@@ -65,3 +65,8 @@ test('looseness applies to nested items', assert => {
   ))
   assert.end()
 })
+
+test('NaN value', assert => {
+  assert.true(equal({'a': NaN}, {'a': 0 / 0}))
+  assert.end()
+})

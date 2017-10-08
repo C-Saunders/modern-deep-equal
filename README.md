@@ -3,7 +3,6 @@
 * Support for modern JavaScript data structures
 
 ### Still outstanding:
-* NaNs (may just need tests)
 * Errors
 
 ### Supports:
