@@ -4,8 +4,13 @@
   "description": "Deep equality testing for JavaScript including support for modern data structures.",
   "main": "index.js",
   "scripts": {
-    "test": "tape test/*.js | tap-dot"
+    "test": "tape test/*.js | tap-dot",
+    "lint": "standard"
   },
+  "pre-commit": [
+    "test",
+    "lint"
+  ],
   "keywords": [
     "equality",
     "deep-equal",
@@ -15,6 +20,7 @@
   "author": "Charlie Saunders",
   "license": "MIT",
   "devDependencies": {
+    "pre-commit": "^1.2.2",
     "standard": "^10.0.3",
     "tap-dot": "^1.0.5",
     "tape": "^4.8.0"
