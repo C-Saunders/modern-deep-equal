@@ -6,6 +6,8 @@ module.exports = (value1, value2, loose = false) => {
   return deepEqual(value1, value2, eq)
 }
 
+const bothInstancesOf = (value1, value2, type) => value1 instanceof type && value2 instanceof type
+
 const deepEqual = (value1, value2, eq) => {
   // primitives
   if (eq(value1, value2) || (Number.isNaN(value1) && Number.isNaN(value2))) return true
@@ -17,15 +19,15 @@ const deepEqual = (value1, value2, eq) => {
     return value1.every((item, index) => deepEqual(item, value2[index], eq))
   }
 
-  if ((value1 instanceof RegExp && value2 instanceof RegExp) || (value1 instanceof Error && value2 instanceof Error)) {
+  if (bothInstancesOf(value1, value2, RegExp) || bothInstancesOf(value1, value2, Error)) {
     return value1.toString() === value2.toString()
   }
 
-  if (value1 instanceof Date && value2 instanceof Date) {
+  if (bothInstancesOf(value1, value2, Date)) {
     return value1.getMilliseconds() === value2.getMilliseconds()
   }
 
-  if ((value1 instanceof Set && value2 instanceof Set) || (value1 instanceof Map && value2 instanceof Map)) {
+  if (bothInstancesOf(value1, value2, Set) || bothInstancesOf(value1, value2, Map)) {
     if (value1.size !== value2.size) return false
     return deepEqual(Array.from(value1).sort(), Array.from(value2).sort(), eq)
   }
