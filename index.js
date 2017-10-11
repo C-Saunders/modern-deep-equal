@@ -17,7 +17,7 @@ const deepEqual = (value1, value2, eq) => {
     return value1.every((item, index) => deepEqual(item, value2[index], eq))
   }
 
-  if (value1 instanceof RegExp && value2 instanceof RegExp) {
+  if ((value1 instanceof RegExp && value2 instanceof RegExp) || (value1 instanceof Error && value2 instanceof Error)) {
     return value1.toString() === value2.toString()
   }
 

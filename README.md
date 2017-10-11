@@ -2,9 +2,6 @@
 * Deep equality checking (checks nested objects)
 * Support for modern JavaScript data structures
 
-### Still outstanding:
-* Errors
-
 ### Supports:
 * Strict and loose equality checking modes for primitives
   * `===` vs. `==` applied to values
