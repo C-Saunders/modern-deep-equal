@@ -7,6 +7,7 @@
   * `===` vs. `==` applied to values
 * Dates (millisecond value comparison)
 * Regular expressions
+* Errors
 * Nested object checking for
   * POJOs ({'a': 1})
   * Arrays
