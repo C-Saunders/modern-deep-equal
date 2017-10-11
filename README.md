@@ -9,14 +9,14 @@
 * Regular expressions
 * Errors
 * Nested object checking for
-  * POJOs ({'a': 1})
+  * POJOs (plain objects like {'a': 1})
   * Arrays
   * Maps
   * Sets
 
 ### Not supported:
-* [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet](WeakSets) - do not have enumerable keys
-* [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap](WeakMaps) - do not have enumerable keys
+* [WeakSets](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet) - do not have enumerable keys
+* [WeakMaps](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap) - do not have enumerable keys
 
 ## Development:
 * `git clone`
@@ -24,8 +24,8 @@
 * `npm run test`
 
 ### Dev notes:
-* Testing with [https://github.com/substack/tape](tape)
-* Linting with [https://standardjs.com/](Standard)
+* Testing with [tape](https://github.com/substack/tape)
+* Linting with [Standard](https://standardjs.com/)
 
 ### Inspired by:
 * https://github.com/substack/node-deep-equal
