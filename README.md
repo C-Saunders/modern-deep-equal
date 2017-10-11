@@ -2,6 +2,20 @@
 * Deep equality checking (checks nested objects)
 * Support for modern JavaScript data structures
 
+### Usage:
+```javascript
+const deepEq = require('modern-deep-equal')
+
+// deepEq(value1, value2, loose = false)
+
+// nested values are checked
+deepEq({ 'a': 1, 'b': [1, 2] }, { 'b': [1, 2], 'a': 1 }) // true
+
+// defaults to strict equality check
+deepEq(new Set(['a', [1, 2, 3]]), new Set(['a', ['1', '2', '3']])) // false
+deepEq(new Set(['a', [1, 2, 3]]), new Set(['a', ['1', '2', '3']]), true) // true
+```
+
 ### Supports:
 * Strict and loose equality checking modes for primitives
   * `===` vs. `==` applied to values
