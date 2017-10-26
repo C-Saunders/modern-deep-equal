@@ -22,6 +22,7 @@ deepEq(new Set(['a', [1, 2, 3]]), new Set(['a', ['1', '2', '3']]), true) // true
 * Dates (millisecond value comparison)
 * Regular expressions
 * Errors
+* [Buffers](https://nodejs.org/api/buffer.html)
 * Nested object checking for
   * POJOs (plain objects like {'a': 1})
   * Arrays
