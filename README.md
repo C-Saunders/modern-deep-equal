@@ -22,6 +22,7 @@ deepEq(new Set(['a', [1, 2, 3]]), new Set(['a', ['1', '2', '3']]), true) // true
 * Dates (millisecond value comparison)
 * Regular expressions
 * Errors
+* [TypedArrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray)
 * Nested object checking for
   * POJOs (plain objects like {'a': 1})
   * Arrays
