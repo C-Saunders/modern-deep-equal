@@ -6,12 +6,22 @@
 ```javascript
 const deepEq = require('modern-deep-equal')
 
+// standard equality operators don't work for non-primitives
+{'a': 1} === {'a': 1} // false, same for ==
+[1, 2] === [1, 2] // false, same for ==
+
+// the function signature is:
 // deepEq(value1, value2, loose = false)
 
+deepEq({ 'a': 1 }, { 'a': 1 }) // true
+
 // nested values are checked
+deepEq({ 'a': 1, 'b': [1, 2] }, { 'a': 1, 'b': [2, 1] }) // false
+
+// for objects, values are compared by key
 deepEq({ 'a': 1, 'b': [1, 2] }, { 'b': [1, 2], 'a': 1 }) // true
 
-// defaults to strict equality check
+// defaults to strict equality check (using === for the primitives)
 deepEq(new Set(['a', [1, 2, 3]]), new Set(['a', ['1', '2', '3']])) // false
 deepEq(new Set(['a', [1, 2, 3]]), new Set(['a', ['1', '2', '3']]), true) // true
 ```
