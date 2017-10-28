@@ -1,6 +1,6 @@
 {
   "name": "modern-deep-equal",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Deep equality testing for JavaScript including support for modern data structures.",
   "main": "index.js",
   "scripts": {
